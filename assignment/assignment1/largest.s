@@ -2,9 +2,9 @@
      export__main	 
 	 ENTRY 
 __main function
-	          MOV r0 , #20   ;1st number
-	          MOV r1 , #36    ;2nd number
-              MOV r2 , #10 	  ;3rd number  			  
+	          MOV r0 , #12   ;1st number
+	          MOV r1 , #10    ;2nd number
+              MOV r2 , #16 	  ;3rd number  			  
               CMP r0 , r1
               IT HI
               MOVHI r1 , r0 

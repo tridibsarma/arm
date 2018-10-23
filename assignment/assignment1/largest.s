@@ -3,7 +3,7 @@
 	 ENTRY 
 __main function
 	          MOV r0 , #12   ;1st number
-	          MOV r1 , #10    ;2nd number
+	          MOV r1 , #16    ;2nd number
               MOV r2 , #16 	  ;3rd number  			  
               CMP r0 , r1
               IT HI

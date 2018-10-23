@@ -4,8 +4,8 @@
 __main  function
 	          MOV r0 , #0  ;f(0) = 0
 	          MOV r1 , #1    ; f(1) = 1
-              MOV r7 , #1	  ; number to calculate fibonacci series 
-              MOV r2 , r7	 ; R2 for storing output value 		  
+              MOV r7 , #6	  ; upto which term you want
+              MOV r2 , r7	 ; r2 will hold output value 		  
               CMP r2 , #1
               IT LS 
               BLS STOP				  

@@ -1,9 +1,9 @@
-AREA     appcode, CODE, READONLY
+  AREA     appcode, CODE, READONLY
      export __main	 
 	 ENTRY 
 __main  function
 	          MOV r0 , #28	  ;value of a	
-			  MOV r1 , #7     ;value of b
+			  MOV r1 , #5     ;value of b
 LOOP			  CMP r0 , r1
               IT EQ 
               BEQ STOP	

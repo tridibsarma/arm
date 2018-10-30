@@ -6,7 +6,7 @@
 __main  FUNCTION
 
 	VMOV.F32 S1, #5;	x-Number to find e^x
-	VMOV.F32 S2, #30;	Number of terms been considered in e^x expansion
+	VMOV.F32 S2, #30;	Number of terms been considered in e^x expansion(more value=> more precicsion)
 	VMOV.F32 S3, #1;	count
 	VMOV.F32 S4, #1; 	temp
 	VMOV.F32 S5, #1; 	result

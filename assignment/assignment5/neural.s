@@ -46,7 +46,7 @@ XNOR_LOGIC        VLDR.F32 s28 ,=-5 	;WEIGHT W1
                   VLDR.F32 s31 ,=1   ;BIAS   
                    B  loop
 
-NOT_LOGIC         VLDR.F32 s2 , =0
+NOT_LOGIC         VLDR.F32 s29 , =0
                   VLDR.F32 s28 ,=0.5 	;WEIGHT W1   
 		          VLDR.F32 s29 ,=-0.7  ;WEIGHT W2   
                   VLDR.F32	s30 ,=0 	;WEIGHT W3

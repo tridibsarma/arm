@@ -13,47 +13,47 @@ NAND_LOGIC         VLDR.F32 s28 ,=0.6 	;WEIGHT W1
 		           VLDR.F32 s29 ,=-0.8  ;WEIGHT W2   
                    VLDR.F32	s30 ,=-0.8 	;WEIGHT W3
                    VLDR.F32 s31 ,=0.3   ;BIAS   
-                   B  X_CALCULATION
+                   B  loop
 
 
 NOR_LOGIC          VLDR.F32 s28 ,=0.5 	;WEIGHT W1   
 		           VLDR.F32 s29 ,=-0.7  ;WEIGHT W2   
                    VLDR.F32	s30 ,=-0.7 	;WEIGHT W3
                    VLDR.F32 s31 ,=0.1   ;BIAS   
-                   B  X_CALCULATION
+                   B  loop
 
 AND_LOGIC         VLDR.F32 s28 ,=-0.1 	;WEIGHT W1   
 		          VLDR.F32 s29 ,=0.2  ;WEIGHT W2   
                   VLDR.F32	s30 ,=0.2 	;WEIGHT W3
                   VLDR.F32 s31 ,=-0.2   ;BIAS   
-                   B  X_CALCULATION
+                   B  loop
 
 OR_LOGIC          VLDR.F32 s28 ,=-0.1	;WEIGHT W1   
 		          VLDR.F32 s29 ,=0.7  ;WEIGHT W2   
                   VLDR.F32	s30 ,=0.7 	;WEIGHT W3
                   VLDR.F32 s31 ,=-0.1  ;BIAS				  
-                   B  X_CALCULATION
+                   B  loop
 
 XOR_LOGIC         VLDR.F32 s28 ,=-5 	;WEIGHT W1   
 		          VLDR.F32 s29 ,=20  ;WEIGHT W2   
                   VLDR.F32	s30 ,=10 	;WEIGHT W3
                   VLDR.F32 s31 ,=1   ;BIAS   
-                   B  X_CALCULATION
+                   B  loop
 
 XNOR_LOGIC        VLDR.F32 s28 ,=-5 	;WEIGHT W1   
 		          VLDR.F32 s29 ,=20  ;WEIGHT W2   
                   VLDR.F32	s30 ,=10 	;WEIGHT W3
                   VLDR.F32 s31 ,=1   ;BIAS   
-                   B  X_CALCULATION
+                   B  loop
 
 NOT_LOGIC         VLDR.F32 s2 , =0
                   VLDR.F32 s28 ,=0.5 	;WEIGHT W1   
 		          VLDR.F32 s29 ,=-0.7  ;WEIGHT W2   
                   VLDR.F32	s30 ,=0 	;WEIGHT W3
                   VLDR.F32 s31 ,=0.1   ;BIAS   
-                   B  X_CALCULATION
+                   B  loop
 		  
-X_CALCULATION		  VMUL.F32  s14 , s0 ,s28  ;S15 WILL HAVE SUM OF WEIGHTS
+loop		  VMUL.F32  s14 , s0 ,s28  ;S15 WILL HAVE SUM OF WEIGHTS
                       VADD.F32  s15  , s15 ,s14
 		              VMUL.F32  s14 , s1 ,s29  
 					  VADD.F32  s15  , s15 ,s14
